@@ -39,12 +39,24 @@
         margin: 0 10px 0 10px;
     }
 
-    #leftRssColumn,
-    #centerRssColumn,
+    #leftRssColumn {
+	    float: left;
+        /* should be 20 px but due to rounding differences some browsers don't render that properly */
+        width: calc(calc(100% - 21px) / 5.6);
+        border: none;
+    }
+	
+    #centerRssColumn {
+	    float: left;
+        /* should be 20 px but due to rounding differences some browsers don't render that properly */
+        width: calc(calc(100% - 21px) / 1.8);
+        border: none;
+    }
+	
     #rightRssColumn {
         float: left;
         /* should be 20 px but due to rounding differences some browsers don't render that properly */
-        width: calc((100% - 21px) / 3);
+        width: calc((100% - 21px) / 3.76);
         border: none;
     }
 
