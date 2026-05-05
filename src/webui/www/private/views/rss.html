@@ -39,16 +39,26 @@
         margin: 0 10px 0 10px;
     }
 
-    #leftRssColumn,
-    #centerRssColumn,
-    #rightRssColumn {
-        float: left;
-        /* should be 20 px but due to rounding differences some browsers don't render that properly */
-        width: calc((100% - 21px) / 3);
+    #leftRssColumn {
+	    float: left;
+        width: calc(calc(100% - 21px) / 5.6);
+        border: none;
+    }
+
+    #centerRssColumn {
+	    float: left;
+        width: calc(calc(100% - 21px) / 1.8);
         border: none;
     }
 
     #rightRssColumn {
+        float: left;
+        /* should be 20 px but due to rounding differences some browsers don't render that properly */
+        width: calc((100% - 21px) / 3.76);
+        border: none;
+    }
+
+    #rightRssColumn {   
         overflow: auto;
         height: 100%;
     }
@@ -226,7 +236,7 @@
             };
         };
 
-        const serverSyncRssDataInterval = 1500;
+        const serverSyncRssDataInterval = 30000;
         let feedData = {};
         let pathByFeedId = new Map();
         let feedRefreshTimer = -1;
